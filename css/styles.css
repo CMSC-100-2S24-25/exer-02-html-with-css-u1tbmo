@@ -305,6 +305,9 @@ section.about-me {
   h1, h2 {
     margin: 0.2em auto;
   }
+  > p {
+    text-align: center;
+  }
   .text-wrapper {
     padding: 0 20em;
   }
