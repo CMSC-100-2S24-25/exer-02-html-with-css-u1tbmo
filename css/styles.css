@@ -285,3 +285,12 @@ https://www.geeksforgeeks.org/how-to-place-background-image-using-before-pseudo-
 .flight-manager::before {
   background-image: url("../resources/images/flight-manager.png");
 }
+
+/* Footer Section */
+
+section.footer {
+  background-color: var(--surface-dim);
+  .text > * {
+    text-align: center;
+  }
+}
