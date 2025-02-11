@@ -307,20 +307,22 @@ section.about-me {
   position: relative;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  align-items: center;
+  
   width: 16em;
   height: 8em;
   border-radius: 6px;
-  padding: 1.5em;
-
+  padding: 1em;
+  
   z-index: 0;
   background-color: var(--secondary-container);
-
+  
   h1 {
     color: var(--surface);
-    margin: 0 0 0.2em 0;
+    text-align: center;
+    font-size: calc(var(--h1) / 2.5);
     z-index: 2;
-    font-size: calc(var(--h1) / 2);
   }
 }
 
