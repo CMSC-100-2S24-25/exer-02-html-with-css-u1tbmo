@@ -149,7 +149,7 @@ body {
 /* Sections */
 
 section {
-  padding: 1.5em 25vw;
+  padding: 1.5em 10vw;
   padding-bottom: 4em;
 }
 
@@ -160,6 +160,9 @@ section > h1 {
 /* Hero Section */
 
 section.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .hero-content {
     display: grid;
     grid-template-columns: [start] 3fr [middle] 1fr [end];
@@ -309,15 +312,15 @@ section.about-me {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   width: 16em;
   height: 8em;
   border-radius: 6px;
   padding: 1em;
-  
+
   z-index: 0;
   background-color: var(--secondary-container);
-  
+
   h1 {
     color: var(--surface);
     text-align: center;
