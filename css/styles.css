@@ -1,6 +1,6 @@
 /* Import from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
 
 :root {
   /* Typescale */
@@ -44,24 +44,11 @@
 /* Text */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Flex", serif;
+  font-family: "Chivo Mono", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   color: var(--on-surface);
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 100,
-    "GRAD" 0,
-    "XOPQ" 96,
-    "XTRA" 468,
-    "YOPQ" 79,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
-  margin: 0.6em auto;
 }
 
 h1 {
@@ -89,7 +76,8 @@ h6 {
 }
 
 p, small, a, li {
-  font-family: "Space Mono", serif;
+  font-family: "Atkinson Hyperlegible Next", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -119,35 +107,37 @@ body {
 
 /* Navbar */
 
-nav {
+.navbar {
+  position: relative;
+  top: 1em;
   display: flex;
-  padding: 1em;
-  background-color: var(--surf-container-high);
-  justify-content: flex-end;
+  padding: 1.5em;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 .navitems {
   display: flex;
-  justify-content: flex-end;
-  min-width: 50%;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .navitems > a {
   text-decoration: none;
-  color: var(--on-surface);
+  color: var(--surface);
   font-size: var(--h6);
-  transition: ease-in-out 0.2s;
 }
 
 .navitems > a:hover {
-  color: var(--secondary);
-  transition: ease-in-out 0.2s;
+  font-weight: bold;
 }
 
 /* Sections */
 
 section {
-  padding: 2em max(25vw);
+  padding: 1.5em 25vw;
   padding-bottom: 4em;
   background-color: var(--surf-container);
 }
@@ -159,10 +149,44 @@ section > h1 {
 /* Hero Section */
 
 section.hero {
-  display: grid;
-  grid-template-columns: [start] 3fr [middle] 1fr [end];
-  grid-template-areas: "text image";
-  gap: 2em;
+  .hero-content {
+    display: grid;
+    grid-template-columns: [start] 3fr [middle] 1fr [end];
+    grid-template-areas: "text image";
+    gap: 2em;
+    margin-top: 4em;
+
+    .text {
+      h1, h2, p, small {
+        color: var(--surface);
+      }
+      h1 {
+        margin: 0 auto;
+        font-size: calc(var(--h1) * 1.5);
+      }
+      h2 {
+        font-size: calc(var(--h2) / 2);
+        margin: 0 auto;
+      }
+      h3 {
+        font-size: calc(var(--p) * 1.2);
+        margin: 0 auto;
+      }
+      small {
+        font-size: calc(var(--small) * 1.2);
+      }
+    }
+    .image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 40%;
+      img {
+        border-radius: 50%;
+        width: 12em;
+      }
+    }
+  }
   background-image: linear-gradient(
     110deg,
     hsl(216deg 50% 32%) 1%,
@@ -174,30 +198,6 @@ section.hero {
     hsl(264deg 17% 32%) 65%,
     hsl(288deg 19% 31%) 100%
   );
-  .text {
-    h1, h2, p, small {
-      color: var(--surface);
-    }
-    h1 {
-      font-size: var(--h1);
-    }
-    h2 {
-      font-size: var(--h2);
-    }
-    h3 {
-      font-size: var(--p);
-    }
-  }
-  .image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 40%;
-    img {
-      border-radius: 50%;
-      width: 12em;
-    }
-  }
 }
 
 /* Projects Section */
