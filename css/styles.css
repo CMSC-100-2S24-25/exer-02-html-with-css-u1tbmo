@@ -161,6 +161,7 @@ section.hero {
   display: grid;
   grid-template-columns: [start] 3fr [middle] 1fr [end];
   grid-template-areas: "text image";
+  gap: 2em;
   background-image: linear-gradient(
     110deg,
     hsl(216deg 50% 32%) 1%,
