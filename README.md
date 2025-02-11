@@ -13,4 +13,8 @@
 
 ## Key Takeaways:
 
-- Work in progress!
+Continuing with the HTML and CSS concepts from CMSC 12, I have learned how to use flex to create website layouts. 
+
+One of the key difficulties with pure HTML and CSS is the difficulty of adding new content. While CSS classes helps in making reusable elements like cards, HTML requires us to manually add new elements with the same card layout every time.
+
+I'm expecting that future lessons will be able to teach me more about how to make websites more dynamic.
