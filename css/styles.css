@@ -36,6 +36,8 @@
   --surf-container: #e2e2e9;
   --surf-container-high: #d3d4db;
   --surf-container-highest: #c5c6cd;
+
+  --lt-green: #acdc5c;
 }
 
 /* Box Sizing:
@@ -131,16 +133,17 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-between;
-}
-
-.navitems > a {
-  text-decoration: none;
-  color: var(--surface);
-  font-size: var(--h6);
-}
-
-.navitems > a:hover {
-  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: var(--surface);
+    font-size: var(--h6);
+  }
+  a:hover {
+    font-weight: bold;
+  }
+  .links:hover {
+    color: var(--lt-green);
+  }
 }
 
 /* Sections */
