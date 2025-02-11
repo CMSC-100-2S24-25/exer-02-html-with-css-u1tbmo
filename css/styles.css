@@ -121,7 +121,6 @@ body {
 nav {
   display: flex;
   padding: 1em;
-  outline: var(--outline);
   background-color: var(--surf-container-high);
   justify-content: flex-end;
 }
