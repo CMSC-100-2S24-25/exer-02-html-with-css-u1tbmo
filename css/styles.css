@@ -321,6 +321,10 @@ section.about-me {
   }
 }
 
+.card-half:hover {
+  cursor: default;
+}
+
 /* Footer Section */
 
 section.footer {
