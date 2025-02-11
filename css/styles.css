@@ -305,6 +305,9 @@ section.about-me {
   h1, h2 {
     margin: 0.2em auto;
   }
+  .text-wrapper {
+    padding: 0 20em;
+  }
 }
 
 .card-half {
