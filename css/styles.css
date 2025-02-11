@@ -178,12 +178,12 @@ section.hero {
     }
     .image {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      max-width: 40%;
+      align-content: center;
       img {
         border-radius: 50%;
-        width: 12em;
+        width: 16em;
+        height: 16em;
       }
     }
   }
