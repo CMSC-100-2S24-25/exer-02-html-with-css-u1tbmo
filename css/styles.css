@@ -294,6 +294,7 @@ https://www.geeksforgeeks.org/how-to-place-background-image-using-before-pseudo-
 /* About Me Section */
 
 section.about-me {
+  padding: 1.5em 25vw;
   background-color: var(--surf-container-low);
   margin: 5vw;
   border-radius: 6px;
