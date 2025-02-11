@@ -1,5 +1,6 @@
 /* Import from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   /* Typescale */
@@ -14,7 +15,7 @@
   /* Colors */
   --primary: #012c5b;
   --secondary: #232c3d;
-  --tertiary: #3a2440;
+  --tertiary: #232c3d;
   --error: #600004;
   --primary-container: #29497a;
   --secondary-container: #40495b;
@@ -45,7 +46,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Flex", serif;
   font-optical-sizing: auto;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   color: var(--on-surface);
   font-variation-settings:
@@ -62,24 +63,42 @@ h1, h2, h3, h4, h5, h6 {
     "YTUC" 712;
 }
 
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
 p, small, a, li {
-  font-family: "Roboto Flex", serif;
-  font-optical-sizing: auto;
+  font-family: "Space Mono", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--on-surface);
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 100,
-    "GRAD" 0,
-    "XOPQ" 96,
-    "XTRA" 468,
-    "YOPQ" 79,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
+}
+
+p {
+  font-size: var(--p);
+}
+
+small {
+  font-size: 0.8rem;
 }
 
 /* Body */
@@ -88,48 +107,95 @@ body {
   background-color: var(--surface);
   justify-content: center;
   align-content: center;
+  margin: 0;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 15vw;
 }
 
 /* Navbar */
 
 nav {
   display: flex;
-  margin: 1vh 2vw;
   padding: 1em;
-  background-color: var(--surf-container-high);
   outline: var(--outline);
-  border-radius: 6px;
-  justify-content: center;
+  background-color: var(--surf-container-high);
+  justify-content: flex-end;
 }
 
 .navitems {
   display: flex;
-  align-content: center;
+  justify-content: flex-end;
+  min-width: 50%;
 }
 
 .navitems > a {
   text-decoration: none;
   color: var(--on-surface);
-  font-weight: 600;
   font-size: var(--h6);
+  transition: ease-in-out 0.2s;
+}
+
+.navitems > a:hover {
+  color: var(--secondary);
+  transition: ease-in-out 0.2s;
 }
 
 /* Sections */
 
 section {
-  padding: 2em;
+  padding: 2em max(25vw);
+  padding-bottom: 4em;
   background-color: var(--surf-container);
-  border-radius: 8px;
-  margin: 1em;
 }
 
 section > h1 {
   text-align: center;
+}
+
+/* Hero Section */
+
+section.hero {
+  display: grid;
+  grid-template-columns: [start] 3fr [middle] 1fr [end];
+  grid-template-areas: "text image";
+  background-image: linear-gradient(
+    110deg,
+    hsl(216deg 50% 32%) 1%,
+    hsl(218deg 39% 32%) 24%,
+    hsl(219deg 30% 31%) 32%,
+    hsl(220deg 22% 31%) 38%,
+    hsl(226deg 17% 31%) 45%,
+    hsl(243deg 15% 33%) 53%,
+    hsl(264deg 17% 32%) 65%,
+    hsl(288deg 19% 31%) 100%
+  );
+  .text {
+    h1, h2, p, small {
+      color: var(--surface);
+      margin: 0.6em auto;
+    }
+    h1 {
+      font-size: var(--h1);
+    }
+    h2 {
+      font-size: var(--h2);
+    }
+    h3 {
+      font-size: var(--p);
+    }
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40%;
+    img {
+      border-radius: 50%;
+      width: 12em;
+    }
+  }
 }
