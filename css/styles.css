@@ -3,7 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
 
 :root {
-  /* Typescale */
+  /* Typescale:
+  https://typescale.com/
+  */
   --h1: 2.986rem;
   --h2: 2.488rem;
   --h3: 2.074rem;
@@ -12,7 +14,10 @@
   --h6: 1.2rem;
   --p: 1rem;
 
-  /* Colors */
+  /* Colors:
+  https://material-foundation.github.io/material-theme-builder/
+  */
+
   --primary: #012c5b;
   --secondary: #232c3d;
   --tertiary: #232c3d;
@@ -33,7 +38,9 @@
   --surf-container-highest: #c5c6cd;
 }
 
-/* Fix Box Sizing: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+/* Box Sizing:
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
 
 *,
 *:before,
@@ -41,7 +48,9 @@
   box-sizing: border-box;
 }
 
-/* Text */
+/* Text and Fonts:
+https://fonts.google.com/
+*/
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Chivo Mono", serif;
@@ -246,6 +255,10 @@ section.hero {
 .card:hover {
   cursor: default;
 }
+
+/* Background Images using Pseudo-Selectors:
+https://www.geeksforgeeks.org/how-to-place-background-image-using-before-pseudo-selectors-in-css/ 
+*/
 
 .card::before {
   content: "";
