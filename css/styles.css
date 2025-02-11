@@ -149,7 +149,7 @@ body {
 /* Sections */
 
 section {
-  padding: 1.5em 10vw;
+  padding: 1.5em 12vw;
   padding-bottom: 4em;
 }
 
@@ -176,18 +176,18 @@ section.hero {
       }
       h1 {
         margin: 0 auto;
-        font-size: calc(var(--h1) * 1.5);
+        font-size: calc(var(--h1) * 1.2);
       }
       h2 {
-        font-size: calc(var(--h2) / 2);
+        font-size: calc(var(--h2) / 1.8);
         margin: 0 auto;
       }
-      h3 {
+      p {
         font-size: calc(var(--p) * 1.2);
-        margin: 0 auto;
+        margin: 0.5em auto;
       }
       small {
-        font-size: calc(var(--small) * 1.2);
+        font-size: var(--small);
       }
     }
     .image {
